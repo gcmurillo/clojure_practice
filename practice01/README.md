@@ -2,31 +2,19 @@
 
 FIXME: description
 
-## Installation
+## Functions
 
-Download from http://example.com/FIXME.
+### (max n1 n2)
+Return the major number of two
 
-## Usage
+### (is_vowel letter)
+Return true if letter is vowel, false if not
 
-FIXME: explanation
+### (cadema)
+Ask for two strings and print if are equals or not, and the length of the first one
 
-    $ java -jar practice01-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+### (guess_number)
+Guess number game
 
 ## License
 
