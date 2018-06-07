@@ -56,4 +56,35 @@
   )
   (cadenas)
 
+  (println "\n4. Function four")
+  (defn guess_number[]
+    (println "Hello! What's your name?")
+    (def username (read-line))
+
+    (def number (rand-int 15))
+    (def counter 0)
+    (def parsed 0)
+    (loop [guessesTaken 0]
+      (when (and (< guessesTaken 6) (not= parsed number))
+        (println "Guess a number: ")
+        (def guess (read-line))
+        (def parsed (Integer/parseInt (re-find  #"\d+" guess)))
+
+        (if (< parsed number)
+          (println "Your number is too low")
+          (if (> parsed number)
+            (println "Your number is too high")   
+          )
+        )
+        (def counter guessesTaken)
+        (recur (+ guessesTaken 1))
+      )
+    )
+
+    (if (= parsed number)
+      (println "Good job" username "You guessed the number in" (str counter) "attempts")
+      (println "No, the number I had in mind was" (str number))
+    )
+  )
+  (guess_number)
 )
