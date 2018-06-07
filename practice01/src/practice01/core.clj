@@ -36,4 +36,24 @@
   (println "(is_vowel 'b') ->" (is_vowel "b"))
   (println "(is_vowel 'a') ->" (is_vowel "a"))
   (println "(is_vowel 'E') ->" (is_vowel "E"))
+
+  (println "\n3. Function three")
+  (defn cadenas[]
+    (println "Ingrese primera cadena: ")
+    (def c1 (read-line))
+    (println "Ingrese segunda cadena: ")
+    (def c2 (read-line))
+
+    (if (= c1 c2)
+      (println "Las cadenas son iguales.")
+      (println "Las cadenas son distintas.")
+    )
+
+    (println "La cadena '" c1 "' tiene " (count c1) " caracteres")
+    
+    (def c3 (str c1 " " c2))
+    (println "\"" c3 "\"") 
+  )
+  (cadenas)
+
 )
